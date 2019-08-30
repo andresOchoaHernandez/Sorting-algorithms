@@ -150,14 +150,13 @@ void maxHeapDelete(int *a,int n){
 
   while(i<n){
 
-    int rigthChild;
-    int leftChild;
+	int rigthChild=rigth(i);
+    int leftChild=left(i);
+
     int greaterChild;
     int greaterChildindex;
 
     if(rigth(i)<n && left(i)<n){
-      rigthChild=rigth(i);
-      leftChild=left(i);
       greaterChild=greater(a[rigthChild],a[leftChild]);
       greaterChildindex= a[rigthChild]==greaterChild?rigthChild:leftChild;
 
